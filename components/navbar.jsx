@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+
 export default function Navbar() {
   const [scrollY, setScrollY] = useState(0);
   const [direction, setDirection] = useState("up");
@@ -94,7 +95,7 @@ export default function Navbar() {
                 <Link href={"/galeri"}>Galeri</Link>
               </li>
               <li>
-                <Link href={"/kontak"}>Kontak</Link>
+                <Link href={"/ppdb"}>PPDB</Link>
               </li>
             </ul>
           </li>

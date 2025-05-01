@@ -4,15 +4,53 @@ import { redirect } from "next/navigation";
 import { home } from "./home";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import {
+  fetchImagesStart,
+  fetchImagesSuccess,
+} from "@/lib/features/images/imagesSlice";
+
+const fetchAndConvertImages = async (
+  type = [
+    { name: "icon", folder: "1EwD8cJfTPbyC2wJDk_vkrpevYEInEV8B" },
+    { name: "photos", folder: "12DgjhdT2vGGpoghrnBPocBkcnz16fNcS" },
+    { name: "logo", folder: "1jwKoOzQVNXCFeSHBB_wqznrZ3mY_agSb" },
+  ]
+) => {
+  const allImages = {}; // Initialize an empty object to store images
+
+  for (const item of type) {
+    const { name, folder } = item;
+    const url = `https://www.googleapis.com/drive/v3/files?q='${folder}'+in+parents&key=AIzaSyC_UwB8sCJfgaCvujcDoUtos6-6N5q7qlA`;
+    await fetch(url)
+      .then((res) => res.json())
+      .then(async (data) => {
+        for (const item of data.files) {
+          const res = await fetch(`/api/image/${item.id}`);
+          const data = await res.json();
+          if (!allImages[name]) {
+            allImages[name] = {}; // Initialize the object for the specific name
+          }
+          allImages[name][item.name.replace(/\./g, "_")] = data.base64;
+        }
+      });
+  }
+};
 
 export default function Home() {
-  const [photo, setPhoto] = useState(null);
+  const dispatch = useDispatch();
+  const images = useSelector((state) => state.image.images);
 
-  useEffect(async () => {
-    const data = await fetch(
-      "https://firebasestorage.googleapis.com/v0/b/raf-social-media.appspot.com/o/profileImage%2FDDt3Lq3b71dpXVcK4mKvz8CmmYr1?alt=media&token=c120fc28-1508-4c88-a804-6713dff1b846"
-    ).then((res) => res);
-    setPhoto(data);
+  useEffect(() => {
+    async function fetchData() {
+      dispatch(fetchImagesStart());
+      const fetchedImages = await fetchAndConvertImages();
+      await dispatch(fetchImagesSuccess(fetchedImages));
+      console.log(fetchedImages);
+      console.log(images);
+      console.log(images.photos);
+    }
+    fetchData();
   }, []);
 
   return (
@@ -23,7 +61,7 @@ export default function Home() {
             <div key={sect.id} className="group">
               <div className="group-even:bg-third group-odd:bg-primary px-8 pt-16 pb-16 text-center">
                 <div className="m-auto max-w-screen-md">
-                  <Image src={photo} />
+                  {/* <Image src={images[sect.thumb]} /> */}
                   <h2 className="mb-6 font-bold text-xl">{sect.title}</h2>
                   <p
                     className="mb-7 text-sm md:text-base"
