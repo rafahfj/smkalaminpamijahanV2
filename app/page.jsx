@@ -50,7 +50,7 @@ export default function Home() {
         })}
         <div className="relative -mt-16 -mb-16">
           <svg
-            viewBox="0 0 1440 300"
+            viewBox="0 0 1440 200"
             xmlns="http://www.w3.org/2000/svg"
             className="drop-shadow-standard w-full h-auto"
             preserveAspectRatio="none"

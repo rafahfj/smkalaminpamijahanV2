@@ -315,7 +315,7 @@ export const jurusan = {
       id: "1",
       title: "BISNIS DARING DAN PEMASARAN",
       text: "Program keahlian ini mempersiapkan siswa untuk memahami konsep bisnis online, pemasaran digital, serta pengelolaan e-commerce. Siswa akan belajar tentang strategi pemasaran, analisis pasar, dan penggunaan teknologi informasi dalam bisnis.",
-      thumb: "/assets/photos/siswa-bdp.webp",
+      thumb: "/assets/photos/bdp-ujikom1.jpg",
     },
     {
       id: "2",
@@ -327,7 +327,7 @@ export const jurusan = {
       id: "3",
       title: "TEKNIK KOMPUTER DAN JARINGAN",
       text: "Program ini mengajarkan siswa tentang pemeliharaan perangkat keras dan perangkat lunak komputer, serta pengelolaan jaringan komputer. Siswa akan mendapatkan keterampilan praktis dalam troubleshooting dan konfigurasi jaringan.",
-      thumb: "/assets/photos/siswa-tkj.webp",
+      thumb: "/assets/photos/siswa-tkj.jpg",
     },
     {
       id: "4",
@@ -518,6 +518,30 @@ export const galeri = [
   {
     src: "/assets/photos/pelantikan3.jpg",
     alt: "Pelantikan 3",
+  },
+  {
+    src: "/assets/photos/pelantikan4.jpg",
+    alt: "Pelantikan 4",
+  },
+  {
+    src: "/assets/photos/renungan1.jpg",
+    alt: "Renungan Malam",
+  },
+  {
+    src: "/assets/photos/renungan2.jpg",
+    alt: "Renungan Malam",
+  },
+  {
+    src: "/assets/photos/siswa-tkj.jpg",
+    alt: "Siswa TKJ",
+  },
+  {
+    src: "/assets/photos/guru-wisuda2.jpg",
+    alt: "Guru-guru",
+  },
+  {
+    src: "/assets/photos/makrab1.jpg",
+    alt: "Foto Angkatan 2025",
   },
 ];
 

@@ -4,7 +4,6 @@ import Header from "@/components/Header";
 import LoadingWraper from "@/components/LoadingWraper";
 import { pengajar } from "../data";
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 
 const TeacherCard = ({ person, expandable = false }) => {
   const [isOpen, setIsOpen] = useState(false);
