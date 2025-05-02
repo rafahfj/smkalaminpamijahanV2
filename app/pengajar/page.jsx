@@ -22,18 +22,17 @@ const TeacherCard = ({ person, expandable = false }) => {
       <p className="mt-2 font-semibold text-base">{person.name}</p>
       <p className="text-gray-600 text-sm">{person.title}</p>
 
-      <AnimatePresence>
-        {isOpen && person.text && (
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            className="bg-gray-100 shadow mt-3 p-3 rounded text-gray-700 text-sm"
-          >
+      <div
+        className={`overflow-hidden transition-all duration-500 ease-in-out ${
+          isOpen ? "max-h-50 opacity-100 mt-3" : "max-h-0 opacity-0"
+        }`}
+      >
+        {person.text && (
+          <div className="bg-gray-100 shadow p-3 rounded text-gray-700 text-sm">
             {person.text}
-          </motion.div>
+          </div>
         )}
-      </AnimatePresence>
+      </div>
     </div>
   );
 };
@@ -42,7 +41,7 @@ export default function TeachersPage() {
   return (
     <LoadingWraper time={1000}>
       <Header data={pengajar.header} />
-      <section className="relative space-y-12 bg-primary -mb-16 p-8 pt-14 rounded-t-4xl transition-all duration-300">
+      <section className="relative space-y-12 bg-primary -mb-16 p-8 pt-14 rounded-t-4xl transition-[height] duration-300">
         {/* Kepsek */}
         <div className="text-center">
           <h2 className="mb-4 font-bold text-2xl">Kepala Sekolah</h2>

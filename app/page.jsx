@@ -48,7 +48,7 @@ export default function Home() {
             </div>
           );
         })}
-        <div className="relative -mb-16">
+        <div className="relative -mt-16 -mb-16">
           <svg
             viewBox="0 0 1440 300"
             xmlns="http://www.w3.org/2000/svg"
@@ -72,13 +72,13 @@ export default function Home() {
                 <div
                   key={foto.id}
                   tabIndex={0}
-                  className="flex justify-center shadow hover:shadow-md focus:shadow-lg active:shadow-sm rounded-[10px] w-[160px] h-[160px] overflow-hidden focus:scale-110 active:scale-75 transition-transform duration-200 ease-in-out cursor-pointer"
+                  className="rounded-lg w-full h-48 overflow-hidden"
                 >
                   <img
                     src={foto.src}
                     alt={foto.alt}
                     title={foto.alt}
-                    className="h-full"
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300 cursor-pointer"
                   />
                 </div>
               ))}
@@ -93,7 +93,7 @@ export default function Home() {
             </div>
           </section>
         </div>
-        <div className="relative -mb-16">
+        <div className="relative -mt-16 -mb-16">
           <svg
             viewBox="0 0 1440 200"
             xmlns="http://www.w3.org/2000/svg"
@@ -153,7 +153,7 @@ export default function Home() {
               fill="#5db996"
             />
           </svg>
-          <div className="-top-1 relative md:flex gap-5 bg-third -mb-16 px-4 pb-20">
+          <div className="-top-1 relative md:flex gap-5 bg-third -mb-20 px-4 pb-28">
             <div className="flex-1/2">
               <h2 className="mb-4 font-semibold text-xl text-center">
                 Kontak Informasi
