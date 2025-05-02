@@ -1,7 +1,8 @@
 import "@/styles/globals.css";
 import Navbar from "@/components/navbar";
-import StoreProvider from "./StoreProvider";
-import LoadingWraper from "./LoadingWraper";
+import LoadingWraper from "../components/LoadingWraper";
+import Footer from "@/components/Footer";
+
 export const metadata = {
   title: "SMK Al Amin Pamijahan",
   description: "created by rafahfj",
@@ -9,15 +10,14 @@ export const metadata = {
 
 export default function LayoutPage({ children }) {
   return (
-    <StoreProvider>
-      <html lang="en" className="scroll-smooth">
-        <body className="pt-16">
-          <LoadingWraper>
-            <Navbar />
-            {children}
-          </LoadingWraper>
-        </body>
-      </html>
-    </StoreProvider>
+    <html lang="en" className="scroll-smooth">
+      <body className="pt-16 transition-all duration-300">
+        <LoadingWraper time={3000}>
+          <Navbar />
+          {children}
+          <Footer />
+        </LoadingWraper>
+      </body>
+    </html>
   );
 }

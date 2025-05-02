@@ -23,8 +23,46 @@
   --color-third: #5db996;
   --color-accent: #118b50;
   --shadow-standard: 0 0 7px rgba(0, 0, 0, 0.2);
+  --shadow-extra: 0 0 12px rgba(0, 0, 0, 0.3);
+  --drop-shadow-standard: 0 -10px 3px rgba(0, 0, 0, 0.2);
+  --drop-shadow-extra: 0 0 12px rgba(0, 0, 0, 0.3);
+  --breakpoint-500: 500px;
+  --breakpoint-600: 600px;
+  --font-code: "Fira Code", monospace;
 }
 
 body {
   font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  @keyframes reveal {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes unreveal {
+    0% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+  }
+
+  .animate-reveal {
+    animation: reveal 0.7s ease forwards;
+  }
+
+  .animate-unreveal {
+    animation: unreveal 0.3s ease forwards;
+  }
 }

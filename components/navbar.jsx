@@ -1,5 +1,6 @@
 "use client";
 
+import { home } from "@/app/data";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
@@ -7,6 +8,8 @@ export default function Navbar() {
   const [scrollY, setScrollY] = useState(0);
   const [direction, setDirection] = useState("up");
   const [menu, setMenu] = useState(false);
+
+  const { logo } = home.header;
 
   useEffect(() => {
     let lastScrollY = window.scrollY;
@@ -31,15 +34,15 @@ export default function Navbar() {
   return (
     <>
       <div
-        className={`top-0 right-0 left-0 fixed bg-primary/20 shadow-md backdrop-blur-sm transition-transform duration-300 ${
+        className={`top-0 right-0 left-0 fixed bg-primary/40 shadow-md z-20 backdrop-blur-sm transition-transform duration-300 ${
           direction === "down" && scrollY > 100
             ? "-translate-y-full"
             : "translate-y-0"
         }`}
       >
         <ul className="flex justify-between p-4">
-          <li className="mini-logo">
-            {/* <img src={props.data?.logo} alt={props.data?.alt} /> */}
+          <li className="flex items-center gap-4">
+            <img src={logo} className="w-10" alt="YHMA" />
             <p className="font-bold text-lg">SMK Al Amin</p>
           </li>
           <li className="parentNav">
@@ -75,7 +78,7 @@ export default function Navbar() {
               </label>
             </div>
 
-            <ul className="hidden md:flex gap-4">
+            <ul className="hidden md:flex items-center gap-4 pt-1">
               <li>
                 <Link href={"/"}>Home</Link>
               </li>
@@ -102,17 +105,17 @@ export default function Navbar() {
         </ul>
       </div>
       <div
-        className={`top-0 left-0 fixed bg-primary backdrop-blur-md w-[250px] h-[100vh] transition-transform ${
+        className={`top-0 left-0 z-20 fixed bg-primary/50 shadow-standard backdrop-blur-md w-[250px] h-[100vh] transition-transform ${
           menu ? "translate-x-0" : "-translate-x-full"
         } duration-500`}
       >
         <ul className="flex flex-col items-end gap-5 p-10 h-full text-black">
-          <li>
+          <li onClick={() => setMenu(false)}>
             <Link href={"/"} className="font-semibold hover:text-gray-500">
               Home
             </Link>
           </li>
-          <li>
+          <li onClick={() => setMenu(false)}>
             <Link
               href={"/sejarah"}
               className="font-semibold hover:text-gray-500"
@@ -120,7 +123,7 @@ export default function Navbar() {
               Sejarah
             </Link>
           </li>
-          <li>
+          <li onClick={() => setMenu(false)}>
             <Link
               href={"/jurusan"}
               className="font-semibold hover:text-gray-500"
@@ -128,7 +131,7 @@ export default function Navbar() {
               Jurusan
             </Link>
           </li>
-          <li>
+          <li onClick={() => setMenu(false)}>
             <Link
               href={"/ekskul"}
               className="font-semibold hover:text-gray-500"
@@ -136,7 +139,7 @@ export default function Navbar() {
               Ekskul
             </Link>
           </li>
-          <li>
+          <li onClick={() => setMenu(false)}>
             <Link
               href={"/pengajar"}
               className="font-semibold hover:text-gray-500"
@@ -144,7 +147,7 @@ export default function Navbar() {
               Pengajar
             </Link>
           </li>
-          <li>
+          <li onClick={() => setMenu(false)}>
             <Link
               href={"/galeri"}
               className="font-semibold hover:text-gray-500"
@@ -152,12 +155,9 @@ export default function Navbar() {
               Galeri
             </Link>
           </li>
-          <li>
-            <Link
-              href={"/kontak"}
-              className="font-semibold hover:text-gray-500"
-            >
-              Kontak
+          <li onClick={() => setMenu(false)}>
+            <Link href={"/ppdb"} className="font-semibold hover:text-gray-500">
+              PPDB
             </Link>
           </li>
         </ul>
