@@ -55,7 +55,7 @@ export const metadata = {
 
   // Metadata lainnya ...
   verification: {
-    google: "da4ESJ0nUVSozsWN7334N5ZijTOEeQuP8Iw7qI4PMyE",
+    google: "RxRVBg0GNo9NoKo2kRijQx2PZUOMn51NjzNR17N-Yso",
   },
 };
 
