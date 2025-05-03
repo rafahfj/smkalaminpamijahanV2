@@ -1,5 +1,3 @@
-"use client";
-
 import LoadingWraper from "@/components/LoadingWraper";
 import { sosmed } from "../data";
 
