@@ -3,6 +3,12 @@
 import LoadingWraper from "@/components/LoadingWraper";
 import { sosmed } from "../data";
 
+export const metadata = {
+  title: "PPDB - SMK Al Amin Pamijahan",
+  description:
+    "Informasi lengkap Penerimaan Peserta Didik Baru (PPDB) SMK Al Amin Pamijahan.",
+};
+
 export default function PPDB() {
   return (
     <div>
