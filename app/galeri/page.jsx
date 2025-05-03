@@ -14,7 +14,7 @@ export default function Galeri() {
         <section className="px-4 py-10">
           <h2 className="mb-6 font-bold text-3xl text-center">Galeri</h2>
           <div className="gap-4 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-            {galeri.map((item, index) => (
+            {galeri.toReversed().map((item, index) => (
               <div
                 key={index}
                 className="rounded-lg w-full h-48 overflow-hidden"

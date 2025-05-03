@@ -55,7 +55,7 @@ export default function Footer() {
       </div>
       <div className="bg-primary">
         <p className="font-code text-[11px] md:text-sm text-center">
-          Copyright © 2024 |
+          Copyright © 2025 |
           <a
             href="https://rafahfajrijuwaeni.vercel.app"
             target="blank"

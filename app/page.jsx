@@ -50,7 +50,7 @@ export default function Home() {
         })}
         <div className="relative -mt-16 -mb-16">
           <svg
-            viewBox="0 0 1440 200"
+            viewBox="0 0 1440 150"
             xmlns="http://www.w3.org/2000/svg"
             className="drop-shadow-standard w-full h-auto"
             preserveAspectRatio="none"
@@ -84,18 +84,18 @@ export default function Home() {
               ))}
             </div>
             <div className="mt-8 text-center">
-              <a
-                href="/galeri"
+              <button
+                onClick={() => redirect("/galeri")}
                 className="inline-block bg-third shadow-standard hover:shadow-md active:shadow-sm px-3 py-1 rounded-lg text-white transition-transform duration-200 ease-in-out"
               >
                 Lebih Banyak
-              </a>
+              </button>
             </div>
           </section>
         </div>
         <div className="relative -mt-16 -mb-16">
           <svg
-            viewBox="0 0 1440 200"
+            viewBox="0 0 1440 150"
             xmlns="http://www.w3.org/2000/svg"
             className="drop-shadow-standard w-full"
             preserveAspectRatio="none"
