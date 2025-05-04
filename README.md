@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Website Resmi SMK Al Amin Pamijahan
 
-## Getting Started
+Ini adalah website resmi SMK Al Amin Pamijahan yang dibuat menggunakan Next.js dan TailwindCSS. Website ini menyajikan informasi lengkap seputar profil sekolah, jurusan, kegiatan ekstrakurikuler, galeri, serta informasi PPDB.
 
-First, run the development server:
+## Fitur Utama
+
+- Beranda dengan informasi singkat sekolah
+- Halaman Profil: Sejarah, Visi Misi, Struktur Organisasi
+- Halaman Jurusan: Informasi program keahlian
+- Halaman Ekstrakurikuler
+- Halaman Galeri: Dokumentasi kegiatan sekolah
+- Halaman Pengajar
+- Informasi PPDB (Penerimaan Peserta Didik Baru)
+- SEO-friendly dengan sitemap XML dan meta tag
+- Responsive design
+
+## Teknologi yang Digunakan
+
+- [Next.js](https://nextjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Vercel](https://vercel.com/) untuk hosting
+- SEO optimization (meta tag, sitemap.xml)
+
+## Instalasi
+
+1. Clone repositori:
+   ```bash
+   git clone https://github.com/rafahfj/smkalaminpamijahanV2.git
+   cd smkalaminpamijahanV2
+npm install
+npm rum dev
+
+# SMK Al Amin Pamijahan Official Website
+
+This is the official website of **SMK Al Amin Pamijahan**, built using Next.js and Tailwind CSS. The site provides comprehensive information about the school, departments, extracurricular activities, gallery, and new student admissions (PPDB).
+
+## Features
+
+- Home page with school introduction  
+- Profile section: History, Vision & Mission, Organizational Structure  
+- Department and major descriptions  
+- Extracurricular activities overview  
+- Gallery with photo documentation  
+- Teachers and staff page  
+- PPDB (New Student Admission) information  
+- SEO-friendly (meta tags and sitemap)  
+- Responsive design for mobile and desktop  
+
+## Tech Stack
+
+- [Next.js](https://nextjs.org/)  
+- [Tailwind CSS](https://tailwindcss.com/)  
+- [Vercel](https://vercel.com/) for deployment  
+- SEO tools (metadata, sitemap)
+
+## Installation & Running Locally
+
+Run this command to clone and start the project:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+git clone https://github.com/username/smk-alamin-pamijahan.git && cd smk-alamin-pamijahan && npm install && npm run dev
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
