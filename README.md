@@ -4,31 +4,34 @@ Ini adalah website resmi SMK Al Amin Pamijahan yang dibuat menggunakan Next.js d
 
 ## Fitur Utama
 
-- Beranda dengan informasi singkat sekolah
-- Halaman Profil: Sejarah, Visi Misi, Struktur Organisasi
-- Halaman Jurusan: Informasi program keahlian
-- Halaman Ekstrakurikuler
-- Halaman Galeri: Dokumentasi kegiatan sekolah
-- Halaman Pengajar
-- Informasi PPDB (Penerimaan Peserta Didik Baru)
-- SEO-friendly dengan sitemap XML dan meta tag
-- Responsive design
+- Beranda dengan informasi singkat sekolah  
+- Halaman Profil: Sejarah, Visi Misi, Struktur Organisasi  
+- Halaman Jurusan: Informasi program keahlian  
+- Halaman Ekstrakurikuler  
+- Halaman Galeri: Dokumentasi kegiatan sekolah  
+- Halaman Pengajar dan Tenaga Kependidikan  
+- Informasi PPDB (Penerimaan Peserta Didik Baru)  
+- SEO-friendly dengan sitemap XML dan meta tag  
+- Desain responsive untuk semua perangkat  
 
 ## Teknologi yang Digunakan
 
-- [Next.js](https://nextjs.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Vercel](https://vercel.com/) untuk hosting
+- [Next.js](https://nextjs.org/)  
+- [Tailwind CSS](https://tailwindcss.com/)  
+- [Vercel](https://vercel.com/) untuk hosting dan deployment  
 - SEO optimization (meta tag, sitemap.xml)
 
-## Instalasi
+## Cara Instalasi & Menjalankan Project
 
-Clone repositori:
+Jalankan perintah berikut di terminal:
+
 ```bash
-   git clone https://github.com/rafahfj/smkalaminpamijahanV2.git
-cd smkalaminpamijahanV2
-npm install
-npm run dev
+git clone https://github.com/username/smk-alamin-pamijahan.git && cd smk-alamin-pamijahan && npm install && npm run dev
+```
+
+Website akan berjalan di `http://localhost:3000`
+
+---
 
 # SMK Al Amin Pamijahan Official Website
 
@@ -55,11 +58,10 @@ This is the official website of **SMK Al Amin Pamijahan**, built using Next.js a
 
 ## Installation & Running Locally
 
-Run this command to clone and start the project:
+Run this command in your terminal:
 
 ```bash
 git clone https://github.com/username/smk-alamin-pamijahan.git && cd smk-alamin-pamijahan && npm install && npm run dev
+```
 
-
-
-
+Your site will be available at `http://localhost:3000`
