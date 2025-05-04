@@ -24,11 +24,11 @@ Ini adalah website resmi SMK Al Amin Pamijahan yang dibuat menggunakan Next.js d
 ## Instalasi
 
 Clone repositori:
-   ```bash
+```bash
    git clone https://github.com/rafahfj/smkalaminpamijahanV2.git
-   cd smkalaminpamijahanV2
-   npm install
-   npm run dev
+cd smkalaminpamijahanV2
+npm install
+npm run dev
 
 # SMK Al Amin Pamijahan Official Website
 
