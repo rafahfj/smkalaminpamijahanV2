@@ -27,7 +27,6 @@ Clone repositori:
    ```bash
    git clone https://github.com/rafahfj/smkalaminpamijahanV2.git
    cd smkalaminpamijahanV2
-   ```bash
    npm install
    npm run dev
 
