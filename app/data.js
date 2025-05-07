@@ -201,7 +201,7 @@ export const pengajar = {
       id: "7",
       name: "Sushanti S.E. M.E.",
       title: "Guru BDP",
-      thumb: "/assets/photos/sushanti.jpeg",
+      thumb: "/assets/photos/sushanti.jpg",
     },
     {
       id: "8",
